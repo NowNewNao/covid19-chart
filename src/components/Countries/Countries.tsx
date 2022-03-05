@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import type { Country } from '@/types';
+import { Country } from '@/components/Country';
+import { CountryData } from '@/types';
 
-const Countries: FC<Country[]> = ({ countries }) => (
+const Countries: FC<CountryData[]> = ({ countries }) => (
     <div>
         {countries ? (
             countries.map((country) => {

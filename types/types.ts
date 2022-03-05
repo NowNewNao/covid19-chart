@@ -1,4 +1,4 @@
-export type Country = {
+export type CountryData = {
     Country: string;
     CountryCode: string;
     Date: string;
@@ -22,7 +22,7 @@ export type GlobalData = {
 };
 
 export type ResponseData = {
-    Countries: Country[];
+    Countries: CountryData[];
     Date: string;
     Global: GlobalData;
     ID: string;
