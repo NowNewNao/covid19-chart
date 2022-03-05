@@ -5,9 +5,9 @@ import { CountryData } from '@/types';
 const Countries: FC<CountryData[]> = ({ countries }) => (
     <div>
         {countries ? (
-            countries.map((country) => {
-                return <p key={country.ID}>{country.Country}</p>;
-            })
+            countries.map((country) => (
+                <Country key={country.ID} country={country} />
+            ))
         ) : (
             <p>loading</p>
         )}
