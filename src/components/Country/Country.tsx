@@ -1,24 +1,32 @@
 import React, { FC } from 'react';
-import { CountryData } from '@/types';
+import { CountryData } from '@/types/types';
 
-const Country: FC<CountryData> = ({ country }) => (
+type CountryProps = CountryData;
+
+const Country: FC<CountryProps> = ({
+    Country,
+    NewConfirmed,
+    NewDeaths,
+    TotalConfirmed,
+    TotalDeaths,
+}) => (
     <div>
-        <p>{country.Country}</p>
+        <p>{Country}</p>
         <div>
             <p>NewConfirmed</p>
-            <p>{country.NewConfirmed}</p>
+            <p>{NewConfirmed}</p>
         </div>
         <div>
             <p>NewDeaths</p>
-            <p>{country.NewDeaths}</p>
+            <p>{NewDeaths}</p>
         </div>
         <div>
             <p>TotalConfirmed</p>
-            <p>{country.TotalConfirmed}</p>
+            <p>{TotalConfirmed}</p>
         </div>
         <div>
             <p>TotalDeaths</p>
-            <p>{country.TotalDeaths}</p>
+            <p>{TotalDeaths}</p>
         </div>
     </div>
 );
