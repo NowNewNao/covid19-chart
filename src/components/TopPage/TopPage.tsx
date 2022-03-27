@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import { Global } from '@/components/Global';
 import { Countries } from '@/components/Countries';
-import { ResponseData } from '@/types';
+import { ResponseData } from '@/types/types';
 
 const TopPage: FC = () => {
     const [data, setData] = useState<ResponseData | undefined>(undefined);
