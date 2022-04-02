@@ -22,7 +22,7 @@ const TopPage: FC = () => {
             <div>Covid 19 Cases</div>
             {data ? (
                 <>
-                    <Global data={data.Global} />
+                    <Global globalData={data.Global} />
                     <Countries countries={data.Countries} />
                 </>
             ) : (

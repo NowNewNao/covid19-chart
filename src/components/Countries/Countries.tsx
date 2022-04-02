@@ -2,16 +2,13 @@ import React, { FC } from 'react';
 import { Country } from '@/components/Country';
 import { CountryData } from '@/types/types';
 
-type CountriesProps = {
-    countries: CountryData[];
-};
 
-const Countries: FC<CountriesProps> = ({ countries }) => {
+const Countries: FC<{countries:CountryData[]}> = ({countries}) => {
     return (
         <div>
             {countries ? (
                 countries.map((country) => (
-                    <Country key={country.ID} {...country} />
+                    <Country key={country.ID} country={country} />
                 ))
             ) : (
                 <p>loading</p>

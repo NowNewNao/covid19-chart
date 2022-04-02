@@ -1,29 +1,33 @@
 import React, { FC } from 'react';
-import { GlobalData } from '@/types';
+import { GlobalData } from '@/types/types';
 
-const Global: FC<GlobalData> = ({ data }) => (
+const Global: FC<{globalData:GlobalData}> = ({globalData}) => {
+    const { Date, NewConfirmed, NewDeaths, TotalConfirmed, TotalDeaths } = globalData;
+   return (
     <div>
         <div>
             <p>Today</p>
-            <p>{data.Date}</p>
+            <p>{Date}</p>
         </div>
         <div>
             <p>NewConfirmed</p>
-            <p>{data.NewConfirmed}</p>
+            <p>{NewConfirmed}</p>
         </div>
         <div>
             <p>NewDeaths</p>
-            <p>{data.NewDeaths}</p>
+            <p>{NewDeaths}</p>
         </div>
         <div>
             <p>TotalConfirmed</p>
-            <p>{data.TotalConfirmed}</p>
+            <p>{TotalConfirmed}</p>
         </div>
         <div>
             <p>TotalDeaths</p>
-            <p>{data.TotalDeaths}</p>
+            <p>{TotalDeaths}</p>
         </div>
     </div>
-);
+    );
+};
+
 
 export { Global };
