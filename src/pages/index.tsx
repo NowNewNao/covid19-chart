@@ -1,6 +1,5 @@
 import { TopPage } from '@/components/TopPage/TopPage';
-import { GetStaticProps } from 'next';
-import { FC } from 'react';
+import React, { FC } from 'react';
 
 
 
