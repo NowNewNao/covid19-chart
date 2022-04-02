@@ -2,6 +2,7 @@ import React, { FC, useState, useEffect } from 'react';
 import { Global } from '@/components/Global';
 import { Countries } from '@/components/Countries';
 import { ResponseData } from '@/types/types';
+import { Header } from '../Header/Header';
 
 const TopPage: FC = () => {
     const [data, setData] = useState<ResponseData | undefined>(undefined);
@@ -19,7 +20,7 @@ const TopPage: FC = () => {
 
     return (
         <>
-            <div>Covid 19 Cases</div>
+            <Header />
             {data ? (
                 <>
                     <Global globalData={data.Global} />
